@@ -1,51 +1,175 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WallaceBooks</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> <!-- Referência ao CSS externo -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WallaceBooks</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
-        <div class="logo">WallaceBooks</div>
-        <nav class="nav-bar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#books">Livros</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="cabeçalho">
+    <div class="container">
+      <input type="checkbox" id="menu" class="container__botao">
+      <label for="menu" class="container__rotulo">
+        <span class="cabeçalho__menu-hamburguer container__imagem"></span>
+      </label>
+      <ul class="lista-menu">
+        <li class="lista-menu__titulo">Categorias</li>
+        <li class="lista-menu__item">
+          <a href="#" class="lista-menu__link">Ficção Científica</a>
+        </li>
+        <li class="lista-menu__item">
+          <a href="#" class="lista-menu__link">Desenvolvimento de Software</a>
+        </li>
+        <li class="lista-menu__item">
+          <a href="#" class="lista-menu__link">Design Gráfico</a>
+        </li>
+        <li class="lista-menu__item">
+          <a href="#" class="lista-menu__link">Negócios</a>
+        </li>
+        <li class="lista-menu__item">
+          <a href="#" class="lista-menu__link">Tecnologia & Inovação</a>
+        </li>
+      </ul>
+      <img src="img/LogoWallaceBooks.svg" alt="Logo da WallaceBooks" class="container__imagem">
+      <h1 class="container__titulo"><b class="container__titulo--negrito">Wallace</b>Books</h1>
 
-    <section class="hero-section" id="home">
-        <h1 class="hero-title">Bem-vindo à WallaceBooks</h1>
-        <p class="hero-description">A melhor seleção de livros para você! Descubra e compre seus favoritos.</p>
-    </section>
+      <ul class="opções">
+        <input type="checkbox" id="opções-menu" class="opções__botão" />
+        <label for="opções-menu" class="opções__rotulo">
+          <li class="opções__item">Categorias</li>
+        </label>
 
-    <section class="books-section" id="books">
-        <h2>Livros em Destaque</h2>
-        <div class="book">
-            <img src="https://via.placeholder.com/200x300" alt="Livro 1">
-            <h3 class="book-title">Livro 1</h3>
-            <p class="book-description">Descrição do livro 1.</p>
-        </div>
-        <div class="book">
-            <img src="https://via.placeholder.com/200x300" alt="Livro 2">
-            <h3 class="book-title">Livro 2</h3>
-            <p class="book-description">Descrição do livro 2.</p>
-        </div>
-        <div class="book">
-            <img src="https://via.placeholder.com/200x300" alt="Livro 3">
-            <h3 class="book-title">Livro 3</h3>
-            <p class="book-description">Descrição do livro 3.</p>
-        </div>
-    </section>
+        <ul class="lista-menu">
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Ficção Científica</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Desenvolvimento de Software</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Design Gráfico</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Negócios</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Tecnologia & Inovação</a>
+          </li>
+        </ul>
+        <li class="opções__item"><a href="#" class="opções__link">Favoritos</a></li>
+        <li class="opções__item"><a href="#" class="opções__link">Minha estante</a></li>
+      </ul>
 
-    <footer>
-        <p>&copy; 2024 WallaceBooks. Todos os direitos reservados.</p>
-    </footer>
+    </div>
+    <div class="container">
+      <a href="#"><img src="img/Favoritos.svg" alt="Meus favoritos"
+          class="container__imagem container__imagem-transparente"></a>
+      <a href="#" class="container__link">
+        <img src="img/Compras.svg" alt="Carrinhos de compras" class="container__imagem">
+        <p class="container__texto">Minha sacola</p>
+      </a>
+      <a href="#" class="container__link">
+        <img src="img/Usuario.svg" alt="Meu perfil" class="container__imagem">
+        <p class="container__texto">Meu perfil</p>
+      </a>
+    </div>
+  </header>
+
+  <section class="banner">
+    <h2 class="banner__titulo">Comece agora sua jornada literária!</h2>
+    <p class="banner__texto">Explore livros incríveis para expandir seus conhecimentos!</p>
+    <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
+  </section>
+
+  <section class="carrossel">
+    <h2 class="carrossel__titulo">Novos Lançamentos</h2>
+
+    <div class="carrossel__container">
+      <div class="swiper">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/JavaScriptAvancado.svg"
+              alt="Livro sobre JavaScript avançado da WallaceBooks"></div>
+          <div class="swiper-slide"><img src="img/DesignInovador.svg"
+              alt="Livro sobre design inovador da WallaceBooks"></div>
+          <div class="swiper-slide"><img src="img/InteligenciaArtificial.svg" alt="Livro sobre inteligência artificial da WallaceBooks"></div>
+          <div class="swiper-slide">
+            <img src="img/TransformacaoDigital.svg" alt="Livro sobre transformação digital" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/MarketingDigital.svg" alt="Livro sobre marketing digital" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/LiderancaNoTrabalho.svg" alt="Livro sobre liderança no trabalho" />
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+
+      <div class="card">
+        <div class="card__descrição">
+          <div class="descrição">
+            <h3 class="descrição__titulo">Talvez você se interesse por...</h3>
+            <h2 class="descrição__titulo-livro">Domine o React</h2>
+            <p class="descrição__texto">
+              Crie aplicações incríveis com a biblioteca React para JavaScript.
+            </p>
+          </div>
+          <img src="img/React.svg" class="descrição__imagem" />
+        </div>
+        <div class="card__botões">
+          <ul class="botões">
+            <li class="botões__item">
+              <img src="img/Favoritos.svg" alt="Favoritar livro" />
+            </li>
+            <li class="botões__item">
+              <img src="img/Compras.svg" alt="Adicionar no carrinho de compras" />
+            </li>
+          </ul>
+          <a href="#" class="botões__ancora">Saiba mais</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="rodapé">
+    <h2 class="rodapé__titulo">WallaceBooks</h2>
+    <ul class="lista-rodapé">
+      <li class="lista-rodapé__titulo">Categorias</li>
+      <li class="lista-rodapé__item">
+        <a href="#" class="lista-rodapé__link">Ficção Científica</a>
+      </li>
+      <li class="lista-rodapé__item">
+        <a href="#" class="lista-rodapé__link">Desenvolvimento de Software</a>
+      </li>
+      <li class="lista-rodapé__item">
+        <a href="#" class="lista-rodapé__link">Design Gráfico</a>
+      </li>
+    </ul>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".swiper", {
+      spaceBetween: 10,
+      slidesPerView: 3,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+      },
+    });
+  </script>
 </body>
+
 </html>
